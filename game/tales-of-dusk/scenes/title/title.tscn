@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://daoxisl6t4ep2"]
+
+[ext_resource type="Script" uid="uid://doci5tfk2dxpt" path="res://scripts/ui/title_screen.gd" id="1_ds13r"]
+
+[node name="TitleScreen" type="Control" unique_id=959067544]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ds13r")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=473817069]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1793557344]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1749268340]
+layout_mode = 2
+
+[node name="LblTitle" type="Label" parent="CenterContainer/VBoxContainer" unique_id=119501272]
+layout_mode = 2
+text = "Tales of Dusk"
+
+[node name="BtnStart" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1587142780]
+layout_mode = 2
+text = "Start Game"
+
+[node name="BtnContinue" type="Button" parent="CenterContainer/VBoxContainer" unique_id=627583462]
+layout_mode = 2
+text = "Continue"
+
+[node name="BtnSettings" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1690442806]
+layout_mode = 2
+text = "Settings"
+
+[node name="BtnQuit" type="Button" parent="CenterContainer/VBoxContainer" unique_id=819296346]
+layout_mode = 2
+text = "Quit"

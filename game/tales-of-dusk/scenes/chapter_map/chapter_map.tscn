@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://ys4q8bkimltg"]
+
+[ext_resource type="Script" uid="uid://b82e5fmhjek8h" path="res://scripts/ui/chapter_map.gd" id="1_fwap8"]
+
+[node name="ChapterMap" type="Control" unique_id=2015924261]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fwap8")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=149813656]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=518031902]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=2122490549]
+layout_mode = 2
+
+[node name="LblHeader" type="Label" parent="CenterContainer/VBoxContainer" unique_id=94301500]
+layout_mode = 2
+text = "Chapter Map"
+
+[node name="LblDesc" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1385237539]
+layout_mode = 2
+text = "Placeholder chapter entry. Use this scene as the future chapter-select root."
+
+[node name="BtnEnterRoomTest" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1833181317]
+layout_mode = 2
+text = "Enter Room Test"
+
+[node name="BtnBackToTitle" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1607563467]
+layout_mode = 2
+text = "Back to Title"
