@@ -11,7 +11,7 @@ This repository hosts the automated development workflow and Godot 4 implementat
 - Primary Local OS: Windows
 
 ## 3. Current Phase
-Phase 1 - Repository foundation and workflow scaffold
+Phase 3 - Automation protocol and workflow state model
 
 ## 4. Non-Negotiable Design Constraints
 - Room loop: Preview -> Deploy -> Combat -> Result
@@ -42,4 +42,4 @@ Phase 1 - Repository foundation and workflow scaffold
 - VS Code
 
 ## 8. Next Step
-Create the empty Godot project and minimal boot flow.
+Phase 4 - Implement the minimal LangGraph orchestration layer
