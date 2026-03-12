@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="WaveDef" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/data/wave_def.gd" id="1_wavedef"]
+[ext_resource type="Script" path="res://scripts/data/enemy_spawn_def.gd" id="2_enemyspawn"]
+
+[sub_resource type="Resource" id="EnemySpawnDef_wolf"]
+script = ExtResource("2_enemyspawn")
+enemy_type_id = &"wolf"
+count = 3
+spawn_interval = 0.8
+
+[sub_resource type="Resource" id="EnemySpawnDef_big_slime"]
+script = ExtResource("2_enemyspawn")
+enemy_type_id = &"big_slime"
+count = 1
+spawn_interval = 1.5
+
+[resource]
+script = ExtResource("1_wavedef")
+wave_id = &"wave_room02_a"
+delay_before_start = 1.0
+spawns = [SubResource("EnemySpawnDef_wolf"), SubResource("EnemySpawnDef_big_slime")]

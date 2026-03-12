@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RoomDef" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/data/room_def.gd" id="1_roomdef"]
+[ext_resource type="Resource" path="res://data/defs/waves/wave_room02_a.tres" id="2_wave02"]
+
+[resource]
+script = ExtResource("1_roomdef")
+room_id = &"room_boss"
+display_name = "Twilight Gate"
+room_type = 2
+preview_text = "A boss-marked room. This phase uses a placeholder wave until a dedicated boss wave is authored."
+supply_reward = 0
+core_shard_reward = 3
+waves = [ExtResource("2_wave02")]
