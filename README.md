@@ -11,7 +11,7 @@ This repository hosts the automated development workflow and Godot 4 implementat
 - Primary Local OS: Windows
 
 ## 3. Current Phase
-Phase 3 - Automation protocol and workflow state model
+Phase 5 - Controlled Codex local and remote entry layer
 
 ## 4. Non-Negotiable Design Constraints
 - Room loop: Preview -> Deploy -> Combat -> Result
@@ -42,4 +42,4 @@ Phase 3 - Automation protocol and workflow state model
 - VS Code
 
 ## 8. Next Step
-Phase 4 - Implement the minimal LangGraph orchestration layer
+Phase 6 - Codex task generation and gated implementation handoff
