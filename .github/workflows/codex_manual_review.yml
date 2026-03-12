@@ -1,0 +1,37 @@
+name: Codex Manual Review
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "Branch or ref to review"
+        required: true
+        default: "integration"
+
+jobs:
+  codex_review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout target ref
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ inputs.ref }}
+
+      - name: Run Codex review
+        id: run_codex
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          prompt-file: .github/codex/prompts/review.md
+          output-file: codex-output.md
+          safety-strategy: drop-sudo
+          sandbox: read-only
+
+      - name: Upload Codex output
+        uses: actions/upload-artifact@v4
+        with:
+          name: codex-review-output
+          path: codex-output.md
