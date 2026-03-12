@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RoomDef" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/data/room_def.gd" id="1_roomdef"]
+[ext_resource type="Resource" path="res://data/defs/waves/wave_room01_a.tres" id="2_wave01"]
+
+[resource]
+script = ExtResource("1_roomdef")
+room_id = &"room_01"
+display_name = "Forest Approach"
+room_type = 0
+preview_text = "A quiet entry route with light enemy pressure. Suitable for early deployment."
+supply_reward = 2
+core_shard_reward = 0
+waves = [ExtResource("2_wave01")]

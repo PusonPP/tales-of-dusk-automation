@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="UnitDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/data/unit_def.gd" id="1_unitdef"]
+
+[resource]
+script = ExtResource("1_unitdef")
+unit_id = &"guard"
+display_name = "Guard"
+description = "A sturdy frontline defender with solid health and low mobility."
+supply_cost = 2
+max_hp = 24
+attack_power = 3
+attack_interval = 1.2
+move_speed = 40.0
+world_scene = null
+icon = null

@@ -41,6 +41,20 @@ def main() -> int:
         ".github/codex/prompts/review.md",
         ".github/codex/prompts/repo_audit.md",
         ".github/codex/prompts/implement_from_task.md",
+        "game/tales-of-dusk/scripts/data/unit_def.gd",
+        "game/tales-of-dusk/scripts/data/enemy_spawn_def.gd",
+        "game/tales-of-dusk/scripts/data/wave_def.gd",
+        "game/tales-of-dusk/scripts/data/room_def.gd",
+        "game/tales-of-dusk/scripts/data/chapter_def.gd",
+        "game/tales-of-dusk/scripts/data/data_catalog.gd",
+        "game/tales-of-dusk/data/defs/units/unit_guard.tres",
+        "game/tales-of-dusk/data/defs/units/unit_archer.tres",
+        "game/tales-of-dusk/data/defs/rooms/room_01.tres",
+        "game/tales-of-dusk/data/defs/rooms/room_02.tres",
+        "game/tales-of-dusk/data/defs/rooms/room_boss.tres",
+        "game/tales-of-dusk/data/defs/chapters/chapter_01.tres",
+        "game/tales-of-dusk/data/defs/waves/wave_room01_a.tres",
+        "game/tales-of-dusk/data/defs/waves/wave_room02_a.tres",
     ]
 
     for rel_path in required_files:
@@ -49,8 +63,8 @@ def main() -> int:
     require_text(
         "README.md",
         [
-            "Phase 5 - Controlled Codex local and remote entry layer",
-            "Phase 6 - Codex task generation and gated implementation handoff",
+            "Phase 7",
+            "Phase 8",
         ],
     )
 
