@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RoomDef" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/data/room_def.gd" id="1_roomdef"]
+[ext_resource type="Resource" path="res://data/defs/waves/wave_room02_a.tres" id="2_wave02"]
+
+[resource]
+script = ExtResource("1_roomdef")
+room_id = &"room_02"
+display_name = "Broken Crossing"
+room_type = 0
+preview_text = "Enemy pressure rises here. Stronger units begin appearing in the wave."
+supply_reward = 3
+core_shard_reward = 1
+waves = [ExtResource("2_wave02")]

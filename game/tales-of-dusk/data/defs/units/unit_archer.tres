@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="UnitDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/data/unit_def.gd" id="1_unitdef"]
+
+[resource]
+script = ExtResource("1_unitdef")
+unit_id = &"archer"
+display_name = "Archer"
+description = "A lighter ranged unit with faster attacks and lower health."
+supply_cost = 2
+max_hp = 14
+attack_power = 2
+attack_interval = 0.8
+move_speed = 55.0
+world_scene = null
+icon = null
