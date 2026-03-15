@@ -11,7 +11,7 @@ This repository hosts the automated development workflow and Godot 4 implementat
 - Primary Local OS: Windows
 
 ## 3. Current Phase
-Phase 7
+Phase 7 - Godot data layer definition
 
 ## 4. Non-Negotiable Design Constraints
 - Room loop: Preview -> Deploy -> Combat -> Result
@@ -42,4 +42,4 @@ Phase 7
 - VS Code
 
 ## 8. Next Step
-Phase 8
+Phase 8 - Single room minimal gameplay loop
