@@ -2,16 +2,22 @@
 
 [ext_resource type="Script" uid="uid://bepse6y2fmp8p" path="res://scripts/room/room_test.gd" id="1_f33eh"]
 
-[node name="RoomTest" type="Node2D" unique_id=1944952839]
+[node name="RoomTest" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_f33eh")
 
-[node name="World" type="Node2D" parent="." unique_id=1126124038]
+[node name="World" type="Node2D" parent="."]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1407658123]
+[node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1441228297]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="HUD" type="Control" parent="CanvasLayer" unique_id=544250044]
+[node name="HUD" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,7 +25,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/HUD" unique_id=1299425739]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/HUD"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,34 +33,127 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/HUD" unique_id=161565871]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/HUD"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 24.0
+offset_right = -32.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="LblRoomName" type="Label" parent="CanvasLayer/HUD/VBoxContainer" unique_id=168263833]
+[node name="VBoxMain" type="VBoxContainer" parent="CanvasLayer/HUD/MarginContainer"]
 layout_mode = 2
-text = "Room Test"
+theme_override_constants/separation = 12
 
-[node name="LblState" type="Label" parent="CanvasLayer/HUD/VBoxContainer" unique_id=185546572]
+[node name="LblRoomState" type="Label" parent="CanvasLayer/HUD/MarginContainer/VBoxMain"]
 layout_mode = 2
-text = "Current State: Preview"
+text = "State: Preview"
 
-[node name="LblHint" type="Label" parent="CanvasLayer/HUD/VBoxContainer" unique_id=565509503]
+[node name="LblRoomTitle" type="Label" parent="CanvasLayer/HUD/MarginContainer/VBoxMain"]
 layout_mode = 2
-text = "Placeholder state machine view."
+text = "Room Title"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/HUD/VBoxContainer" unique_id=839743910]
+[node name="LblRoomPreview" type="Label" parent="CanvasLayer/HUD/MarginContainer/VBoxMain"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+autowrap_mode = 3
+text = "Room preview text will appear here."
+
+[node name="LblSupply" type="Label" parent="CanvasLayer/HUD/MarginContainer/VBoxMain"]
+layout_mode = 2
+text = "Supply: 0"
+
+[node name="LblReward" type="Label" parent="CanvasLayer/HUD/MarginContainer/VBoxMain"]
+layout_mode = 2
+autowrap_mode = 3
+text = "Reward: +0 Supply / +0 Core Shards"
+
+[node name="PreviewSection" type="VBoxContainer" parent="CanvasLayer/HUD/MarginContainer/VBoxMain"]
 layout_mode = 2
 
-[node name="BtnAdvanceState" type="Button" parent="CanvasLayer/HUD/VBoxContainer/HBoxContainer" unique_id=574902357]
+[node name="BtnStartDeploy" type="Button" parent="CanvasLayer/HUD/MarginContainer/VBoxMain/PreviewSection"]
 layout_mode = 2
-text = "Advance State"
+text = "Start Deploy"
 
-[node name="BtnResetState" type="Button" parent="CanvasLayer/HUD/VBoxContainer/HBoxContainer" unique_id=1675212817]
+[node name="DeploySection" type="VBoxContainer" parent="CanvasLayer/HUD/MarginContainer/VBoxMain"]
+visible = false
 layout_mode = 2
-text = "Reset"
+theme_override_constants/separation = 8
 
-[node name="BtnBackToMap" type="Button" parent="CanvasLayer/HUD/VBoxContainer/HBoxContainer" unique_id=1643825237]
+[node name="LblDeployHeader" type="Label" parent="CanvasLayer/HUD/MarginContainer/VBoxMain/DeploySection"]
+layout_mode = 2
+text = "Deploy Units"
+
+[node name="HBoxDeployButtons" type="HBoxContainer" parent="CanvasLayer/HUD/MarginContainer/VBoxMain/DeploySection"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="BtnSelectGuard" type="Button" parent="CanvasLayer/HUD/MarginContainer/VBoxMain/DeploySection/HBoxDeployButtons"]
+layout_mode = 2
+text = "Select Guard"
+
+[node name="BtnSelectArcher" type="Button" parent="CanvasLayer/HUD/MarginContainer/VBoxMain/DeploySection/HBoxDeployButtons"]
+layout_mode = 2
+text = "Select Archer"
+
+[node name="LblDeploySummary" type="Label" parent="CanvasLayer/HUD/MarginContainer/VBoxMain/DeploySection"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+autowrap_mode = 3
+text = "Selected Units: None
+Total Cost: 0 | Current Supply: 0"
+
+[node name="BtnStartCombat" type="Button" parent="CanvasLayer/HUD/MarginContainer/VBoxMain/DeploySection"]
+layout_mode = 2
+text = "Start Combat"
+
+[node name="CombatSection" type="VBoxContainer" parent="CanvasLayer/HUD/MarginContainer/VBoxMain"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LblCombatHeader" type="Label" parent="CanvasLayer/HUD/MarginContainer/VBoxMain/CombatSection"]
+layout_mode = 2
+text = "Combat Resolve"
+
+[node name="LblCombatSummary" type="Label" parent="CanvasLayer/HUD/MarginContainer/VBoxMain/CombatSection"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+autowrap_mode = 3
+text = "Combat summary will appear here."
+
+[node name="BtnResolveCombat" type="Button" parent="CanvasLayer/HUD/MarginContainer/VBoxMain/CombatSection"]
+layout_mode = 2
+text = "Resolve Combat"
+
+[node name="ResultSection" type="VBoxContainer" parent="CanvasLayer/HUD/MarginContainer/VBoxMain"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LblResultHeader" type="Label" parent="CanvasLayer/HUD/MarginContainer/VBoxMain/ResultSection"]
+layout_mode = 2
+text = "Room Result"
+
+[node name="LblResultSummary" type="Label" parent="CanvasLayer/HUD/MarginContainer/VBoxMain/ResultSection"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+autowrap_mode = 3
+text = "Result summary will appear here."
+
+[node name="BtnBackToMap" type="Button" parent="CanvasLayer/HUD/MarginContainer/VBoxMain/ResultSection"]
 layout_mode = 2
 text = "Back to Chapter Map"
+
+[node name="BtnRetryRoom" type="Button" parent="CanvasLayer/HUD/MarginContainer/VBoxMain/ResultSection"]
+visible = false
+layout_mode = 2
+text = "Retry Room"
+
+[node name="SpacerBottom" type="Control" parent="CanvasLayer/HUD/MarginContainer/VBoxMain"]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
